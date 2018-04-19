@@ -4,11 +4,5 @@ exports.handler = async (event) => {
         clientId: process.env.WUNDERLIST_CLIENT_KEY,
         accessToken: process.env.WUNDERLIST_ACCESS_TOKEN
     });
-    wunderlist.getLists()
-        .then(response => {
-            return response;
-        })
-        .catch(error => {
-            return error;
-        });
+    return await wunderlist.getLists();
 };

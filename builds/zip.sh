@@ -1,1 +1,1 @@
-zip -r ../yourfilename.zip *
+zip -r ../lambda.zip *

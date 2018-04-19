@@ -9,6 +9,7 @@
   "author": "Scott Enriquez",
   "license": "MIT",
   "dependencies": {
-    "async": "^2.6.0"
+    "async": "^2.6.0",
+    "wunderlist-api": "^1.0.4"
   }
 }

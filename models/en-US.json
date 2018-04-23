@@ -20,16 +20,104 @@
                     "slots": [
                         {
                             "name": "item",
-                            "type": "AMAZON.Food"
+                            "type": "AMAZON.Food",
+                            "samples": [
+                                "Add {item}"
+                            ]
                         }
                     ],
                     "samples": [
                         "add {item} to list",
                         "add {item} to grocery list"
                     ]
+                },
+                {
+                    "name": "AMAZON.MoreIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateSettingsIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NextIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageUpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PreviousIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollRightIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollLeftIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollUpIntent",
+                    "samples": []
                 }
             ],
             "types": []
-        }
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "AddToList",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "item",
+                            "type": "AMAZON.Food",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Slot.1217777260120.331507836904",
+                                "elicitation": "Elicit.Slot.1217777260120.331507836904"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1217777260120.331507836904",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please give me an item to add to your Wunderlist app"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1217777260120.331507836904",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I need an item to add to your Wunderlist app"
+                    }
+                ]
+            }
+        ]
     }
 }

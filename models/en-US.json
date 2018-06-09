@@ -16,7 +16,7 @@
                     "samples": []
                 },
                 {
-                    "name": "AddToList",
+                    "name": "AddToSharedList",
                     "slots": [
                         {
                             "name": "item",
@@ -27,8 +27,8 @@
                         }
                     ],
                     "samples": [
-                        "add {item} to list",
-                        "add {item} to grocery list"
+                        "add {item} to shared app",
+                        "add {item} to wunderlist"
                     ]
                 },
                 {
@@ -81,9 +81,11 @@
         "dialog": {
             "intents": [
                 {
-                    "name": "AddToList",
-                    "confirmationRequired": false,
-                    "prompts": {},
+                    "name": "AddToSharedList",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.149728955326"
+                    },
                     "slots": [
                         {
                             "name": "item",
@@ -115,6 +117,15 @@
                     {
                         "type": "PlainText",
                         "value": "I need an item to add to your Wunderlist app"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.149728955326",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "So you want to add {item} to your Wunderlist app?"
                     }
                 ]
             }

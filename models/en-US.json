@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "wunderlist",
+            "invocationName": "scottie's custom skill",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -27,7 +27,7 @@
                         }
                     ],
                     "samples": [
-                        "add {item} to shared app",
+                        "add {item} to scottie shared app",
                         "add {item} to wunderlist"
                     ]
                 },
